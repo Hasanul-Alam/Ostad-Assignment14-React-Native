@@ -1,15 +1,16 @@
-import { Text, View } from "react-native";
+// App.js OR app/index.tsx (for Expo Router)
+// EXPO GO COMPATIBLE VERSION - No Reanimated import needed
 
-export default function Index() {
+import "../global.css";
+import { StatusBar } from "expo-status-bar";
+import { View } from "react-native";
+import MainScreen from "@/src/screens/MainScreen";
+
+export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={{ flex: 1 }}>
+      <StatusBar style="light" />
+      <MainScreen />
     </View>
   );
 }
